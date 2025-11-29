@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weather Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌤️ Weather AI</h1>
+            <div class="search-section">
+                <input type="text" id="city-input" placeholder="Enter city..." value="London">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Weather Card - Compact -->
+        <div class="weather-card">
+            <div class="weather-main">
+                <div class="location" id="location">--</div>
+                <div class="temperature" id="temperature">--°C</div>
+                <div class="description" id="description">--</div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <span>💧</span>
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="detail">
+                    <span>💨</span>
+                    <span id="wind">-- m/s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Chat - Compact -->
+        <div class="ai-section">
+            <div class="chat-header">
+                <h3>🤖 AI Assistant</h3>
+                <div class="quick-actions">
+                    <button class="action-btn" data-question="Umbrella?">☂️</button>
+                    <button class="action-btn" data-question="Clothing?">👕</button>
+                    <button class="action-btn" data-question="Outdoor?">🚶</button>
+                    <button class="action-btn" data-question="Summary">📊</button>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message ai-message">
+                    <strong>AI:</strong> Ask me about weather!
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="ai-input" placeholder="Ask AI...">
+                <button id="ai-send-btn">Ask</button>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error" id="error-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="ai-assistant.js"></script>
+</body>
+</html>
